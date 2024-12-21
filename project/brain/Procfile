@@ -1,1 +1,1 @@
-web: gunicorn ten-brain.wsgi
+web: gunicorn brain.wsgi
