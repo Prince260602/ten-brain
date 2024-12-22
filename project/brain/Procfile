@@ -1,1 +1,2 @@
-web: gunicorn brain.wsgi
+gunicorn brain.wsgi:application
+
