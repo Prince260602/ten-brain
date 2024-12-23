@@ -87,12 +87,18 @@ WSGI_APPLICATION = 'brain.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ten_brain',
-        'HOST': 'localhost',
-        'USER': 'ten_brain_user',
-        'PASSWORD': 'Wc0hJ38CXupJfb2yfGMrSbkQusElvZG5',
-        'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'ten_brain',
+        # 'HOST': 'localhost',
+        # 'USER': 'ten_brain_user',
+        # 'PASSWORD': 'Wc0hJ38CXupJfb2yfGMrSbkQusElvZG5',
+        # 'PORT': '5432',
+'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT', '5432'),      
     }
 }
 # DATABASES = {
