@@ -88,8 +88,7 @@ WSGI_APPLICATION = 'brain.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'ten_brain_research',
-              'NAME': 'ten-brain',
+        'NAME': 'ten_brain_research',
         'HOST': 'localhost',
         'USER': 'root',
         'PASSWORD': 'root',
