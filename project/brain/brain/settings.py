@@ -378,11 +378,11 @@ WSGI_APPLICATION = 'brain.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('ten_brain'),  # Ensure these are set in Render environment variables
-        'USER': os.environ.get('ten_brain_user'),
-        'PASSWORD': os.environ.get('ten_brain_user'),
-        'HOST': os.environ.get('dpg-ctkjvsdumphs73fht160-a', 'localhost'),
-        'PORT': os.environ.get('5432', '5432'),
+        'NAME': os.environ.get('DB_NAME', 'ten_brain'),  # Fallback to 'ten_brain'
+        'USER': os.environ.get('DB_USER', 'ten_brain_user'),  # Fallback to 'ten_brain_user'
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'default_password'),  # Use a secure default
+        'HOST': os.environ.get('DB_HOST', 'localhost'),  # Fallback to localhost
+        'PORT': os.environ.get('DB_PORT', '5432'),  # Fallback to 5432
     }
 }
 
