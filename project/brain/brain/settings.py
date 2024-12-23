@@ -94,11 +94,11 @@ DATABASES = {
         # 'PASSWORD': 'Wc0hJ38CXupJfb2yfGMrSbkQusElvZG5',
         # 'PORT': '5432',
 'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT', '5432'),      
+        'NAME': os.environ.get('DB_NAME'),  # Replace with your database name
+        'USER': os.environ.get('DB_USER'),  # Replace with your database user
+        'PASSWORD': os.environ.get('DB_PASSWORD'),  # Replace with your database password
+        'HOST': os.environ.get('DB_HOST', 'localhost'),  # Database host
+        'PORT': os.environ.get('DB_PORT', '5432'),  # Database port  
     }
 }
 # DATABASES = {
